@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>820</width>
+    <height>678</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>mainwindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QLabel" name="label_savepath">
+    <property name="geometry">
+     <rect>
+      <x>33</x>
+      <y>29</y>
+      <width>51</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>存储路径</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_date">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>40</y>
+      <width>54</width>
+      <height>12</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>日期</string>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="textBrowser_savepath">
+    <property name="geometry">
+     <rect>
+      <x>105</x>
+      <y>30</y>
+      <width>151</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="SelectPath">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>30</y>
+      <width>75</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>更改路径</string>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="textBrowser_date">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>30</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_project">
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>30</y>
+      <width>51</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>工程名</string>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="textBrowser_projectname">
+    <property name="geometry">
+     <rect>
+      <x>610</x>
+      <y>30</y>
+      <width>151</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_slr_preview">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>80</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>单反相机预览</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_hsc_preview">
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>80</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>高数相机预览</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="camera_slr_1" native="true">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>130</y>
+      <width>331</width>
+      <height>131</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QWidget" name="camera_slr_2" native="true">
+    <property name="geometry">
+     <rect>
+      <x>69</x>
+      <y>320</y>
+      <width>331</width>
+      <height>131</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QWidget" name="camara_hsc_1" native="true">
+    <property name="geometry">
+     <rect>
+      <x>479</x>
+      <y>129</y>
+      <width>281</width>
+      <height>121</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QWidget" name="camera_hsc_2" native="true">
+    <property name="geometry">
+     <rect>
+      <x>479</x>
+      <y>320</y>
+      <width>301</width>
+      <height>131</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>820</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>系统设置</string>
+    </property>
+    <widget class="QMenu" name="menuReview">
+     <property name="title">
+      <string>Review</string>
+     </property>
+     <addaction name="actionFirstPage"/>
+     <addaction name="actionLastPage"/>
+     <addaction name="actionPreviousPage"/>
+     <addaction name="actionNextPage"/>
+    </widget>
+    <addaction name="actionNew_project"/>
+    <addaction name="actionOpen_project"/>
+    <addaction name="actionSave_as"/>
+    <addaction name="separator"/>
+    <addaction name="actionCameraSet"/>
+    <addaction name="menuReview"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>单反相机</string>
+    </property>
+    <addaction name="actionAll_Camara"/>
+    <addaction name="actionSLR_1"/>
+    <addaction name="actionSLR_2"/>
+    <addaction name="actionSLR_3"/>
+    <addaction name="actionSLR_4"/>
+    <addaction name="separator"/>
+    <addaction name="actionSLR_Preview"/>
+    <addaction name="actionSLR_Stop_View"/>
+    <addaction name="actionSLR_Start_Capture"/>
+    <addaction name="actionSLR_Stop_Capture"/>
+   </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="title">
+     <string>高速相机</string>
+    </property>
+    <addaction name="actionAll_HCS_Camera"/>
+    <addaction name="actionHSC_1"/>
+    <addaction name="actionHSC_7"/>
+    <addaction name="actionHSC_8"/>
+    <addaction name="actionHSC_9"/>
+    <addaction name="separator"/>
+    <addaction name="actionHSC_Preview"/>
+    <addaction name="actionHSC_Stop_View_2"/>
+    <addaction name="actionHSC_Start_Capture_2"/>
+    <addaction name="actionHSC_Stop_Capture_2"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+   <addaction name="menu_3"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="separator"/>
+   <addaction name="actionNew_project"/>
+   <addaction name="actionOpen_project"/>
+   <addaction name="actionSave_as"/>
+   <addaction name="actionCameraSet"/>
+   <addaction name="actionAll_Camara"/>
+   <addaction name="actionSLR_Preview"/>
+   <addaction name="actionSLR_Stop_View"/>
+   <addaction name="actionSLR_Start_Capture"/>
+   <addaction name="actionSLR_Stop_Capture"/>
+   <addaction name="actionAll_HCS_Camera"/>
+   <addaction name="actionHSC_Preview"/>
+   <addaction name="actionHSC_Stop_View_2"/>
+   <addaction name="actionHSC_Start_Capture_2"/>
+   <addaction name="actionHSC_Stop_Capture_2"/>
+   <addaction name="actionPreviousPage"/>
+   <addaction name="actionNextPage"/>
+   <addaction name="actionFirstPage"/>
+   <addaction name="actionLastPage"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionNew_project">
+   <property name="icon">
+    <iconset>
+     <normaloff>myImages/control/199-Add-File.png</normaloff>myImages/control/199-Add-File.png</iconset>
+   </property>
+   <property name="text">
+    <string>New</string>
+   </property>
+  </action>
+  <action name="actionOpen_project">
+   <property name="icon">
+    <iconset>
+     <normaloff>myImages/control/126-File.png</normaloff>myImages/control/126-File.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open</string>
+   </property>
+  </action>
+  <action name="actionSave_as">
+   <property name="icon">
+    <iconset>
+     <normaloff>myImages/control/2-XML.png</normaloff>myImages/control/2-XML.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="actionCameraSet">
+   <property name="icon">
+    <iconset>
+     <normaloff>myImages/control/38-Settings.png</normaloff>myImages/control/38-Settings.png</iconset>
+   </property>
+   <property name="text">
+    <string>CameraSet</string>
+   </property>
+  </action>
+  <action name="actionFirstPage">
+   <property name="icon">
+    <iconset>
+     <normaloff>myImages/control/102-Left-Round.png</normaloff>myImages/control/102-Left-Round.png</iconset>
+   </property>
+   <property name="text">
+    <string>First</string>
+   </property>
+  </action>
+  <action name="actionLastPage">
+   <property name="icon">
+    <iconset>
+     <normaloff>myImages/control/47-Right-Round.png</normaloff>myImages/control/47-Right-Round.png</iconset>
+   </property>
+   <property name="text">
+    <string>Last</string>
+   </property>
+  </action>
+  <action name="actionPreviousPage">
+   <property name="icon">
+    <iconset>
+     <normaloff>myImages/control/103-Left-Arrow.png</normaloff>myImages/control/103-Left-Arrow.png</iconset>
+   </property>
+   <property name="text">
+    <string>Previous</string>
+   </property>
+  </action>
+  <action name="actionNextPage">
+   <property name="icon">
+    <iconset>
+     <normaloff>myImages/control/48-Right-Arrow.png</normaloff>myImages/control/48-Right-Arrow.png</iconset>
+   </property>
+   <property name="text">
+    <string>Next</string>
+   </property>
+  </action>
+  <action name="actionSLR_1">
+   <property name="text">
+    <string>单反相机1</string>
+   </property>
+  </action>
+  <action name="actionSLR_2">
+   <property name="text">
+    <string>单反相机2</string>
+   </property>
+  </action>
+  <action name="actionSLR_3">
+   <property name="text">
+    <string>单反相机3</string>
+   </property>
+  </action>
+  <action name="actionSLR_4">
+   <property name="text">
+    <string>单反相机4</string>
+   </property>
+  </action>
+  <action name="actionSLR_Preview">
+   <property name="icon">
+    <iconset>
+     <normaloff>myImages/SLR/Eject.png</normaloff>myImages/SLR/Eject.png</iconset>
+   </property>
+   <property name="text">
+    <string>SLR  Preview</string>
+   </property>
+  </action>
+  <action name="actionSLR_Stop_View">
+   <property name="icon">
+    <iconset>
+     <normaloff>myImages/SLR/Stop.png</normaloff>myImages/SLR/Stop.png</iconset>
+   </property>
+   <property name="text">
+    <string>SLR  Stop View</string>
+   </property>
+  </action>
+  <action name="actionSLR_Start_Capture">
+   <property name="icon">
+    <iconset>
+     <normaloff>myImages/SLR/Play.png</normaloff>myImages/SLR/Play.png</iconset>
+   </property>
+   <property name="text">
+    <string>SLR  Start Capture </string>
+   </property>
+  </action>
+  <action name="actionSLR_Stop_Capture">
+   <property name="icon">
+    <iconset>
+     <normaloff>myImages/SLR/Pause.png</normaloff>myImages/SLR/Pause.png</iconset>
+   </property>
+   <property name="text">
+    <string>SLR  Stop Capture</string>
+   </property>
+  </action>
+  <action name="actionHSC_1">
+   <property name="text">
+    <string>高速相机1</string>
+   </property>
+  </action>
+  <action name="actionHSC_7">
+   <property name="text">
+    <string>高速相机2</string>
+   </property>
+  </action>
+  <action name="actionHSC_8">
+   <property name="text">
+    <string>高速相机3</string>
+   </property>
+  </action>
+  <action name="actionHSC_9">
+   <property name="text">
+    <string>高速相机4</string>
+   </property>
+  </action>
+  <action name="actionHSC_Preview">
+   <property name="icon">
+    <iconset>
+     <normaloff>myImages/HSC/button_eject.png</normaloff>myImages/HSC/button_eject.png</iconset>
+   </property>
+   <property name="text">
+    <string>HSC Preview</string>
+   </property>
+  </action>
+  <action name="actionHSC_Stop_View_2">
+   <property name="icon">
+    <iconset>
+     <normaloff>myImages/HSC/button_stop.png</normaloff>myImages/HSC/button_stop.png</iconset>
+   </property>
+   <property name="text">
+    <string>HSC  Stop View</string>
+   </property>
+  </action>
+  <action name="actionHSC_Start_Capture_2">
+   <property name="icon">
+    <iconset>
+     <normaloff>myImages/HSC/button_play.png</normaloff>myImages/HSC/button_play.png</iconset>
+   </property>
+   <property name="text">
+    <string>HSC Start Capture </string>
+   </property>
+  </action>
+  <action name="actionHSC_Stop_Capture_2">
+   <property name="icon">
+    <iconset>
+     <normaloff>myImages/HSC/button_pause.png</normaloff>myImages/HSC/button_pause.png</iconset>
+   </property>
+   <property name="text">
+    <string>HSC   Stop Capture</string>
+   </property>
+  </action>
+  <action name="actionAll_Camara">
+   <property name="icon">
+    <iconset>
+     <normaloff>myImages/SLR/canon_128.png</normaloff>myImages/SLR/canon_128.png</iconset>
+   </property>
+   <property name="text">
+    <string>全部单反相机</string>
+   </property>
+  </action>
+  <action name="actionAll_HCS_Camera">
+   <property name="icon">
+    <iconset>
+     <normaloff>myImages/HSC/camera_128.png</normaloff>myImages/HSC/camera_128.png</iconset>
+   </property>
+   <property name="text">
+    <string>全部高速相机</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="mainwindow.qrc"/>
+ </resources>
+ <connections/>
+</ui>
